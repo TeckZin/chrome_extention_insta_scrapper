@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Insta Scrapper",
+  "version": "1.0",
+  "description": "A sample Chrome extension with content, background, and popup scripts",
+
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content.js"]
+  }],
+
+  "background": {
+    "service_worker": "background.js"
+  }
+}
+
